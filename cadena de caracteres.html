@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Cadena</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	
+var palabraIntroducida = prompt("Introduzca una palabra o texto");
+var letraIntroducida = prompt("Introduzca una letra para saber su cantidad");
+var contadorVocales= 0;  
+var contadorConstantes = 0;
+var contadorLetra = 0;
+
+
+for (var i = 0 ; i < palabraIntroducida.length ; i++) {
+
+	switch(palabraIntroducida.charAt(i)) {
+
+		case "a":
+		contadorVocales++;
+		break;
+
+		case "e":
+		contadorVocales++;
+		break;
+
+		case "i":
+		contadorVocales++;
+		break;
+
+		case "o":
+		contadorVocales++;
+		break;
+
+		case "u":
+		contadorVocales++;
+		break;
+
+		default:
+		contadorConstantes++;
+		break;
+
+	}
+
+}
+var posicion;
+posicion=palabraIntroducida.indexOf(letraIntroducida);
+while (posicion != -1) { 
+     contadorLetra++;           
+     posicion = palabraIntroducida.indexOf(letraIntroducida, posicion + 1); 
+}   
+    
+document.write("LA PALABRA QUE INGRESASTES ES="+ palabraIntroducida+"<br>");
+document.write("NUMERO DE VOLACES=" + contadorVocales);
+document.write("<br>NUMERO DE CONSTANTES=" + contadorConstantes);
+document.write("<br>APARICION DE UN LETRA="+ contadorLetra);
+document.write("<br>Palabra="+  palabraIntroducida.toLowerCase());
+
+</script>
+</body>
+</html>
